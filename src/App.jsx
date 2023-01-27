@@ -83,7 +83,12 @@ function App() {
           <div
             onClick={() => {
               if (chcBalanceSelected >= CHC__BALANCE) return;
-              setChcBalanceSelected((prev) => prev + 1);
+              setChcBalanceSelected((prev) => {
+                if (prev + 50 >= CHC__BALANCE) return CHC__BALANCE;
+                if (prev <= 250) {
+                  return (prev += 25);
+                } else return (prev += 50);
+              });
             }}
             className="rounded-full  min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px] sm:min-h-[70px]"
           >
