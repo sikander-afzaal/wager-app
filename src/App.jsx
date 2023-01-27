@@ -43,7 +43,7 @@ function App() {
           wagedCash={cashBalanceSelected}
         />
       )}
-      <div className="flex justify-center isolate items-start flex-col rounded-3xl min-w-[350px] w-[90%] max-w-[450px] bg-white shadow-lg p-4 relative gap-3 overflow-hidden">
+      <div className="flex justify-center isolate items-start flex-col rounded-3xl min-w-[350px] w-[90%] max-w-[400px] bg-white shadow-lg p-4 relative gap-3 overflow-hidden">
         <div className="absolute left-0 top-0 -z-10 -translate-x-[50%] -translate-y-[67%] bg-veryLightGray border-midGray border-[50px] border-solid rounded-full w-[200%] aspect-square"></div>
         <div className="flex pb-2 justify-between border-solid border-b-2 border-slate w-full items-center gap-3">
           <div className="flex justify-start items-start flex-col gap-1">
