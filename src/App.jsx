@@ -43,7 +43,7 @@ function App() {
           wagedCash={cashBalanceSelected}
         />
       )}
-      <div className="flex justify-center isolate items-start flex-col rounded-3xl min-w-[350px] w-[90%] max-w-[350px] bg-white shadow-lg p-4 relative gap-3 overflow-hidden">
+      <div className="flex justify-center isolate items-start flex-col rounded-3xl min-w-[350px] w-[90%] max-w-[350px] bg-white shadow-box p-4 relative gap-3 overflow-hidden">
         <div className="absolute left-0 top-0 -z-10 -translate-x-[50%] -translate-y-[67%] bg-veryLightGray border-midGray border-[50px] border-solid rounded-full w-[200%] aspect-square"></div>
         <div className="flex pb-2 justify-between border-solid border-b-2 border-slate w-full items-center gap-3">
           <div className="flex justify-start items-start flex-col gap-1">
@@ -65,7 +65,7 @@ function App() {
         <p className="text-grey text-base font-medium leading-[1.3] ">
           {paraText}
         </p>
-        <div className="flex justify-between items-center gap-3 w-full p-3 rounded-full bg-darkBlue">
+        <div className="flex justify-between items-center gap-3 w-full p-2 rounded-full bg-darkBlue">
           {/* //minus btn */}
           <div
             onClick={() => {
@@ -82,11 +82,11 @@ function App() {
                 } else return (prev -= 50);
               });
             }}
-            className="rounded-full min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] sm:min-h-[70px]"
+            className="rounded-full min-w-[60px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] "
           >
             <div className="bg-white rounded-full w-[70%] h-[10px]"></div>
           </div>
-          <h2 className="text-white font-bold text-3xl sm:text-4xl w-full text-center">
+          <h2 className="text-white font-bold text-3xl  w-full text-center">
             {chcBalanceSelected} CHC
           </h2>
           {/* //plus btn */}
@@ -108,7 +108,7 @@ function App() {
                 } else return (prev += 50);
               });
             }}
-            className="rounded-full  min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px] sm:min-h-[70px]"
+            className="rounded-full  min-w-[60px] border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px]"
           >
             <div className="bg-white rounded-full w-[70%] h-[10px]"></div>
             <div className="bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 rounded-full w-[70%] h-[10px]"></div>
@@ -117,7 +117,7 @@ function App() {
         <p className="text-grey font-normal text-sm text-center w-full -mt-2">
           Your CHC balance: {CHC__BALANCE}
         </p>
-        <div className="flex justify-between items-center gap-3 w-full p-3 rounded-full bg-darkBlue">
+        <div className="flex justify-between items-center gap-3 w-full p-2 rounded-full bg-darkBlue">
           {/* //minus btn */}
           <div
             onClick={() => {
@@ -134,11 +134,11 @@ function App() {
                 } else return (prev -= 50);
               });
             }}
-            className="rounded-full min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] sm:min-h-[70px]"
+            className="rounded-full min-w-[60px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] "
           >
             <div className="bg-white rounded-full w-[70%] h-[10px]"></div>
           </div>
-          <h2 className="text-white font-bold text-3xl sm:text-4xl w-full text-center">
+          <h2 className="text-white font-bold text-3xl  w-full text-center">
             ${cashBalanceSelected}
           </h2>
           {/* //plus btn */}
@@ -160,7 +160,7 @@ function App() {
                 } else return (prev += 50);
               });
             }}
-            className="rounded-full  min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px] sm:min-h-[70px]"
+            className="rounded-full  min-w-[60px]  border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px] "
           >
             <div className="bg-white rounded-full w-[70%] h-[10px]"></div>
             <div className="bg-white absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-90 rounded-full w-[70%] h-[10px]"></div>
@@ -211,8 +211,8 @@ function App() {
             Insane
           </p>
         </div>
-        <div className="min-w-[360px] w-[90vw] mt-3 mb-3 bg-red -translate-x-[16px] flex justify-center items-center p-2 max-w-[450px]">
-          <p className="text-white font-semibold text-2xl">
+        <div className="min-w-[360px] w-[90vw] mt-3 mb-3 bg-red -translate-x-[16px] flex justify-center items-center p-2 max-w-[350px]">
+          <p className="text-white font-semibold text-[22px]">
             Payout: {payoutCHC} CHC and ${payoutBalance}
           </p>
         </div>
