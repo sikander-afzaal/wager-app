@@ -9,7 +9,7 @@ module.exports = {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        box: "2px 0px 15px 5px #d1d2d4",
+        box: "0px 3px 15px 5px #d1d2d4",
       },
       colors: {
         slate: "#6d6e70",
