@@ -11,7 +11,7 @@ function App() {
   const [cashBalanceSelected, setCashBalanceSelected] = useState(10);
   const paraText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, itaque velit inventore doloribus consectetur aut tempora sequi officiis doloremque accusamus exercitationem reiciendis repellat animi aliquid tenetur eum eaque dicta suscipit.`;
   const CHC__BALANCE = 758;
-  const CASH__BALANCE = 25;
+  const CASH__BALANCE = 252;
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
@@ -70,7 +70,17 @@ function App() {
           <div
             onClick={() => {
               if (chcBalanceSelected <= 0) return;
-              setChcBalanceSelected((prev) => prev - 1);
+              setChcBalanceSelected((prev) => {
+                if (prev === 50) {
+                  return 25;
+                } else if (prev <= 25 && prev > 10) {
+                  return 10;
+                } else if (prev <= 10 && prev > 5) {
+                  return 5;
+                } else if (prev <= 5 && prev > 0) {
+                  return 0;
+                } else return (prev -= 50);
+              });
             }}
             className="rounded-full min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] sm:min-h-[70px]"
           >
@@ -85,8 +95,16 @@ function App() {
               if (chcBalanceSelected >= CHC__BALANCE) return;
               setChcBalanceSelected((prev) => {
                 if (prev + 50 >= CHC__BALANCE) return CHC__BALANCE;
-                if (prev <= 250) {
-                  return (prev += 25);
+                if (prev <= 50) {
+                  if (prev >= 0 && prev < 5) {
+                    return 5;
+                  } else if (prev >= 5 && prev < 10) {
+                    return 10;
+                  } else if (prev < 25 && prev >= 10) {
+                    return 25;
+                  } else if (prev >= 25 && prev < 50) {
+                    return 50;
+                  } else return (prev += 50);
                 } else return (prev += 50);
               });
             }}
@@ -104,7 +122,17 @@ function App() {
           <div
             onClick={() => {
               if (cashBalanceSelected <= 0) return;
-              setCashBalanceSelected((prev) => prev - 1);
+              setCashBalanceSelected((prev) => {
+                if (prev === 50) {
+                  return 25;
+                } else if (prev <= 25 && prev > 10) {
+                  return 10;
+                } else if (prev <= 10 && prev > 5) {
+                  return 5;
+                } else if (prev <= 5 && prev > 0) {
+                  return 0;
+                } else return (prev -= 50);
+              });
             }}
             className="rounded-full min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-grey flex justify-center items-center min-h-[60px] sm:min-h-[70px]"
           >
@@ -117,7 +145,20 @@ function App() {
           <div
             onClick={() => {
               if (cashBalanceSelected >= CASH__BALANCE) return;
-              setCashBalanceSelected((prev) => prev + 1);
+              setCashBalanceSelected((prev) => {
+                if (prev + 50 >= CASH__BALANCE) return CASH__BALANCE;
+                if (prev <= 50) {
+                  if (prev >= 0 && prev < 5) {
+                    return 5;
+                  } else if (prev >= 5 && prev < 10) {
+                    return 10;
+                  } else if (prev < 25 && prev >= 10) {
+                    return 25;
+                  } else if (prev >= 25 && prev < 50) {
+                    return 50;
+                  } else return (prev += 50);
+                } else return (prev += 50);
+              });
             }}
             className="rounded-full  min-w-[60px] sm:min-w-[70px] border-[6px] cursor-pointer border-solid border-white bg-green flex justify-center items-center relative min-h-[60px] sm:min-h-[70px]"
           >
