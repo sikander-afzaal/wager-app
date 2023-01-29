@@ -7,3 +7,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+.animate {
+  animation: scale 0.6s ease-in-out forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
