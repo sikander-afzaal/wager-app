@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ConfirmModal from "./Components/ConfirmModal";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       elem.classList.remove("animate");
     }, 600);
   }, [payoutBalance]);
-
+  //progress bar code
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setMaxPlayers((prev) => prev + 1);
@@ -39,6 +39,7 @@ function App() {
       clearTimeout(timeOut);
     }
   }, [maxPlayers]);
+  //formulas to calculate payout balances
   useEffect(() => {
     setPayoutBalance(() => {
       const set1 = cashBalanceSelected * levelSelected;
